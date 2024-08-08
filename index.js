@@ -62,7 +62,7 @@ app.post('/api/removeCar', function(req,res){
 
 
 
-let PORT = process.env.PORT || 3007;
-app.listen(PORT, function(){
-    console.log('App starting on port', PORT);
-  });
+// let PORT = process.env.PORT || 3007;
+app.listen(3000, function (){
+    console.log('App listening on port 3000!')
+})
