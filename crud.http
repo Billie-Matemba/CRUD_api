@@ -1,0 +1,29 @@
+POST http://localhost:3000/api/removeCar HTTP/1.1
+content-type: application/json
+
+{
+    "color": "white",
+    "make": "Toyota",
+    "model": "Hilux",
+    "reg_number": "CJ 16455"
+}
+
+##### add car api 
+POST http://localhost:3000/api/addCar HTTP/1.1
+content-type: application/json
+
+{
+    "color": "blue",
+    "make": "Toyota",
+    "model":"Hilux",
+    "reg_number": "4569GP"
+}
+
+#####  popular cars api
+GET http://localhost:3000/api/popularCar HTTP/1.1
+content-type: application/json
+
+#####
+GET http://localhost:3000/api/Cars HTTP/1.1
+content-type: application/json
+

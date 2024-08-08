@@ -1,0 +1,11 @@
+POST http://localhost:3000/api/addCar HTTP/1.1
+content-type: application/json
+
+{
+     "cars": [],
+    "color": "blue",
+    "make": "Toyota",
+    "model":"Hilux",
+    "reg_number": "4569GP"
+}
+
