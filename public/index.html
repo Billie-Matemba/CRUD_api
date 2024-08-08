@@ -7,6 +7,7 @@
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <script src="alpine.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>CarsCRUD</title>
 </head>
 
@@ -39,13 +40,14 @@
         <h1>Most popular car</h1>
         <button @click="PopularCar">Show car</button>
         <span x-text="popular"></span>
-
+<div class="block">
         <h1>Add a new car</h1>
         <input type="text" placeholder="Make" x-model="newmake">
         <input type="text" placeholder="Model" x-model="newmodel">
         <input type="text" placeholder="color" x-model="newcolor">
         <input type="text" placeholder="Registration Number" x-model="newreg_number">
         <button @click="addCar">Add car</button>
+    </div>
 
         <h1>Remove a car</h1>
         <input type="text" placeholder="Make" x-model="removemake">
