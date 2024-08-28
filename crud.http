@@ -1,11 +1,9 @@
+###### delete car
 POST http://localhost:3000/api/removeCar HTTP/1.1
 content-type: application/json
 
 {
-    "color": "white",
-    "make": "Toyota",
-    "model": "Hilux",
-    "reg_number": "CJ 16455"
+    "regNumber": "CL 76173"
 }
 
 ##### add car api 
@@ -15,15 +13,17 @@ content-type: application/json
 {
     "color": "blue",
     "make": "Toyota",
-    "model":"Hilux",
-    "reg_number": "4569GP"
+    "model":"Corolla",
+    "regNumber": "CJ 76173"
 }
 
 #####  popular cars api
 GET http://localhost:3000/api/popularCar HTTP/1.1
 content-type: application/json
 
-#####
+##### read cars data
 GET http://localhost:3000/api/Cars HTTP/1.1
 content-type: application/json
 
+
+###### update existing cars

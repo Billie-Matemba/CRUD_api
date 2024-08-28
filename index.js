@@ -30,31 +30,30 @@ app.get('/api/popularCar', function(req,res){
 //add cars
 app.post('/api/addCar', function(req,res){
     // const cars = req.body.cars;
-    const color = req.body.color;
-    const make = req.body.make;
-    const model = req.body.model;
-    const reg_number = req.body.reg_number;
+    const {color, make, model, reg_number} = req.body;
+   
     
-    const updatedCars = createCar(color, make, model, reg_number);
+    const cars = createCar(color, make, model, reg_number);
+    // cars.push(updatedCars)
     
     res.json({
         message: 'Car added successfully!',
-        cars: updatedCars
+       cars
     });
+
 });
+
 //remove cars
 app.post('/api/removeCar', function(req,res){
     // const cars = req.body.cars;
-    const color = req.body.color;
-    const make = req.body.make;
-    const model = req.body.model;
-    const reg_number = req.body.reg_number;
+    const {reg_number} =req.body;
     
-    const updatedCars = removeCar(color, make, model, reg_number);
+    
+    const removedCars = removeCar(reg_number);
     
     res.json({
         message: 'Car removed successfully!',
-        cars: updatedCars
+        cars: removedCars
     });
 });
 
@@ -62,7 +61,7 @@ app.post('/api/removeCar', function(req,res){
 
 
 
-// let PORT = process.env.PORT || 3007;
+// let PORT = process.env.PORT || 3000;
 app.listen(3000, function (){
     console.log('App listening on port 3000!')
 })

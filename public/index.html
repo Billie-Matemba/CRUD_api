@@ -37,24 +37,28 @@
                 </template>
             </tbody>
         </table>
-        <h1>Most popular car</h1>
-        <button @click="PopularCar">Show car</button>
-        <span x-text="popular"></span>
-<div class="block">
-        <h1>Add a new car</h1>
-        <input type="text" placeholder="Make" x-model="newmake">
-        <input type="text" placeholder="Model" x-model="newmodel">
-        <input type="text" placeholder="color" x-model="newcolor">
-        <input type="text" placeholder="Registration Number" x-model="newreg_number">
-        <button @click="addCar">Add car</button>
-    </div>
 
-        <h1>Remove a car</h1>
-        <input type="text" placeholder="Make" x-model="removemake">
-        <input type="text" placeholder="Model" x-model="removemodel">
-        <input type="text" placeholder="color" x-model="removecolor">
-        <input type="text" placeholder="Registration Number" x-model="removereg_number">
-        <button @click="deleteCar">Remove car</button>
+
+        <div>
+            <h1>Most popular car</h1>
+            <button @click="PopularCar">Show car</button>
+            <span x-text="popular"></span>
+        </div>
+
+        <div>
+            <h1>Add a new car</h1>
+            <input type="text" placeholder="Make" x-model="newmake">
+            <input type="text" placeholder="Model" x-model="newmodel">
+            <input type="text" placeholder="color" x-model="newcolor">
+            <input type="text" placeholder="Registration Number" x-model="newregNumber">
+            <button @click="addCar">Add car</button>
+        </div>
+
+        <div>
+            <h1>Remove a car</h1>
+            <input type="text" placeholder="Registration Number" x-model="removeregNumber">
+            <button @click="deleteCar">Remove car</button>
+        </div>
 
 
 
